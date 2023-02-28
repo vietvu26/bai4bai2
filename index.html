@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function nestCheck(arr1, arr2) {
+  const min1 = Math.min(...arr1);
+  const min2 = Math.min(...arr2);
+  const max1 = Math.max(...arr1);
+  const max2 = Math.max(...arr2);
+
+  if (min1 > min2 && max1 < max2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+const input1 = prompt("Nhập vào mảng 1, các giá trị cách nhau bởi dấu phẩy:");
+const arr1 = input1.split(",").map(Number);
+
+const input2 = prompt("Nhập vào mảng 2, các giá trị cách nhau bởi dấu phẩy:");
+const arr2 = input2.split(",").map(Number);
+
+console.log("Mảng 1:", arr1);
+console.log("Mảng 2:", arr2);
+
+const result = nestCheck(arr1, arr2);
+console.log("Kết quả:", result);
+
+
+    </script>
+    
+</body>
+</html>
